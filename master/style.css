@@ -1,41 +1,43 @@
-/===== Global Styles =====/
-
-{
+/*=====Global Style=====*/
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box;
 }
 
-/===== Full Page Layout =====/
-    html, body {
+/*Full page size*/
+html, body {
     height: 100%;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-x: hidden;
     position: relative;
 }
 
-/===== Custom Font Import =====/
+/*=====Font Import=====*/
 @font-face {
     font-family: "microgamma";
     src: url("fonts/microgrammanormal.ttf") format("truetype");
 }
 
-/===== Header Style =====/
+/*=====Header and Navbar Style=====*/
 header {
-font-family: "microgamma", sans-serif; /* Applies custom font to header */
+    font-family: "microgamma", sans-serif;
 }
 
-/===== Navigation Bar Styles =====/
-    nav.hnavbar {
-    display: flex; 
+.hnavbar {
+    display: flex;
     align-items: center;
-    gap: 12px; 
+    gap: 12px;
     background-color: #182e56;
-    padding: 16px 30px;
-    flex-wrap: wrap;
-    line-height: 1.1;
+    padding: 8px 30px;
+    flex-wrap: wrap; 
 }
 
-/===== Navbar Title Section =====/
+a.home__btn {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Eyebrow Title*/
 .navbar__title {
     display: flex;
     flex-direction: column;
@@ -46,24 +48,20 @@ font-family: "microgamma", sans-serif; /* Applies custom font to header */
     margin-right: 20px;
 }
 
-/* Main title styling inside navbar */
 .main__title {
-    font-size: 18px;
+    font-size: 16px;
 }
 
-/* Subtitle styling under main title */
 .subtitle__title {
-    font-size: 20px;
-font-weight: normal;
+    font-size: 18px;
+    font-weight: normal;
 }
 
-/===== Logo Styling =====/
 .head__logo {
     height: 80px;
     margin-right: 10px;
 }
 
-/===== Navbar Link Style =====/
 .navbar__link {
     color: #F7FCFE;
     text-decoration: none;
@@ -73,56 +71,101 @@ font-weight: normal;
     cursor: pointer;
 }
 
-/===== Dropdown Menu Styles =====/
+/*=====Dropdown Button=====*/
+.head__dropdown {
+  position: relative;
+}
 
-/* Container for dropdown | relative for absolute positioning of content */
-.head_dropdown {
+.drop__btn {
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  padding: 16px 16px;
+  background-color: #28589F;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/*Drop Content w/Animation*/
+.dropdown__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  margin-top: 12px;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  transition: max-height 0.8s ease;
+}
+
+.dropdown__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+}
+
+/*Hover Dropdown*/
+.dropdown__content a:hover {
+  background-color: #c4c8d47a;
+}
+
+.head__dropdown:hover .dropdown__content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
+  background-color: #2858e6;
+}
+
+/*=====Main Content Styling=====*/
+.container__hmcontent {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background__imagekr {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*Text w/Transparent-background*/
+.overlay-text-container {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    height: 75%;
+    width: 40%;  
+    background: transparent;  
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.overlay-text {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
-/* Button inside dropdown */
-.drop__btn {
+.overlay-text p {
+    font-family: "microgamma", sans-serif;
+    color: #F7FCFE;
     font-size: 18px;
-    border: none;   
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: #28589F;
-    font-family: inherit;
-    cursor: pointer;
+    line-height: 2;
+    background: transparent;
 }
 
-/* Hidden dropdown content | shown on hover */
-.dropdown__content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
 
-/* Links inside dropdown content */
-.dropdown__content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    font-size: 12px;
-    display: block;
-    text-align: left;
-}
-
-/* Hover effect for dropdown links */
-.dropdown__content a:hover {
-    background-color: #c4c8d47a;
-}
-
-/* Show dropdown content on hover */
-    .head_dropdown:hover .dropdown__content {
-    display: block;
-}
-
-/* Hover effects for nav links and dropdown button */
-    nav a:hover, .head_dropdown:hover .drop__btn {
-    background-color: #2858e6;
-}

@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homeworld</title>
+    <title>Homeworld: Desserts of Kharak</title>
     <!--Icon for Tab-->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="media/images/HomeowlrdLogo.png" type="image/x-icon">
     <!-- Link to External Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!--Header & Navbar for Page-->
     <header>
+        <!--Navigation Bar-->
         <nav class="hnavbar">
-            <img src="images/HomeowlrdLogo.png" class="head__logo">
-            <div class="navbar__title">
-              <span class="main__title">Homeworld</span>
-              <span class="subtitle__title">Desserts of Kharak</span>
-            </div>
+            <!--Logo image -->
+            <img src="media/images/HomeowlrdLogo.png" class="head__logo">
+
+            <!--Title and Homepage-->
+            <a href="index.html" class="home__btn">
+              <div class="navbar__title">
+                <span class="main__title">Homeworld</span>
+                <span class="subtitle__title">Desserts of Kharak</span>
+              </div>
+            </a>
 
             <!--Story and Character Dropdown-->
-            <div class="head_dropdown">
-              <button class="drop__btn">Story and Characters
+            <div class="head__dropdown">
+              <a href="pages/story-and-character/story-character.html" class="drop__btn">Story and Characters
                 <i class="fa fa-caret-down"></i>
-              </button>
+              </a>
               <div class="dropdown__content">
                 <a href="#">Story Summary</a>
                 <a href="#">Main Character</a>
@@ -33,14 +40,14 @@
             </div>
 
             <!--Plot and Mission Links-->
-            <a href="pages/" class="navbar__link">Plot</a>
-            <a href="pages/" class="navbar__link">Mission</a>
+            <a href="pages/plot/plot.html" class="navbar__link">Plot</a>
+            <a href="pages/mission/mission.html" class="navbar__link">Mission</a>
 
             <!--Faction Dropdown-->
-            <div class="head_dropdown">
-              <button class="drop__btn">Faction
+            <div class="head__dropdown">
+              <a href="pages/faction/faction.html" class="drop__btn">Faction
                 <i class="fa fa-caret-down"></i>
-              </button>
+              </a>
               <div class="dropdown__content">
                 <a href="#">Coalition</a>
                 <a href="#">Gaalsien</a>
@@ -48,10 +55,10 @@
             </div>
 
             <!--Units Dropdown-->
-            <div class="head_dropdown ">
-              <button class="drop__btn">Units
+            <div class="head__dropdown">
+              <a href="pages/units/units.html" class="drop__btn">Units
                 <i class="fa fa-caret-down"></i>
-              </button>
+              </a>
               <div class="dropdown__content">
                 <a href="#">Special Units</a>
                 <a href="#">Capital Ships</a>
@@ -63,13 +70,35 @@
             </div>
         </nav>
     </header>
-
+  
     <!--Main Content-->
     <main>
-        <div class="container__content">
-          <p>
-          Rachel, Gaalsien attacks have been launched against multiple Coalition bases. The northern frontier<br> 
-          is under attack. The launch of our expedition carrier - The Kapisi - has been accelerated</p>
+        <div class="container__hmcontent"> 
+          <img src="media/images/HW-kharak.jpg" alt="homeworld-kharak-planet" class="background__imagekr">
+          <div class="overlay-text-container">
+            <div class="overlay-text">
+              <!--Add typewritter animation of prophecy text and goto next line-->
+              <p id="typewriter-text">
+                The dream began long ago, a whisper carried on the wind<br>
+                A voice from the depths of the desert, calling to us.<br>
+                My brother Jacob believed he could hear it—the Guidestone<br>
+                An ancient artifact lost beneath the sands of Kharak.<br>
+                For years, we searched, driven by a belief that it held the key to our future<br>
+                and when we finally unearthed it, everything changed.<br>
+                The Northern Coalition saw our discovery as a threat<br>
+                accusing us of violating the fragile ceasefire, and the desert erupted into war.<br>
+                They came for us with their fleets, determined to stop what they didn’t understand.<br>
+                Now, the world is dying, the very sand poisoned by the escalating conflict<br> 
+                And the only hope left for our people lies far to the north—deep in hostile territory—where the Jaraci Object waits.<br>
+                We must reach it.<br>
+                Failure is not an option.<br>
+                I am Rachel S’jet, science officer of the Kapisi expedition<br>
+                And at dawn, we leave to face the desert and whatever else awaits us beyond the horizon.
+              </p>
+              <button id="start-btn">Start Story</button>
+              <audio id="story-audio" src="media/audio/story.mp3"></audio>
+            </div>
+          </div>
         </div>
     </main>
 </body>
