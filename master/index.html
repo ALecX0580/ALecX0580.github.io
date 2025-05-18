@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+    <!--Banner of Webpage-->
+    <img src="media/images/HWDK-Rachel.jpg" alt="homeworld-dessert-kharak-rachel-banner" class="bannerimage">
     <!--Header & Navbar for Page-->
     <header>
         <!--Navigation Bar-->
@@ -74,32 +76,122 @@
     <!--Main Content-->
     <main>
         <div class="container__hmcontent"> 
-          <img src="media/images/HW-kharak.jpg" alt="homeworld-kharak-planet" class="background__imagekr">
-          <div class="overlay-text-container">
-            <div class="overlay-text">
-              <!--Add typewritter animation of prophecy text and goto next line-->
-              <p id="typewriter-text">
-                The dream began long ago, a whisper carried on the wind<br>
-                A voice from the depths of the desert, calling to us.<br>
-                My brother Jacob believed he could hear it—the Guidestone<br>
-                An ancient artifact lost beneath the sands of Kharak.<br>
-                For years, we searched, driven by a belief that it held the key to our future<br>
-                and when we finally unearthed it, everything changed.<br>
-                The Northern Coalition saw our discovery as a threat<br>
-                accusing us of violating the fragile ceasefire, and the desert erupted into war.<br>
-                They came for us with their fleets, determined to stop what they didn’t understand.<br>
-                Now, the world is dying, the very sand poisoned by the escalating conflict<br> 
-                And the only hope left for our people lies far to the north—deep in hostile territory—where the Jaraci Object waits.<br>
-                We must reach it.<br>
-                Failure is not an option.<br>
-                I am Rachel S’jet, science officer of the Kapisi expedition<br>
-                And at dawn, we leave to face the desert and whatever else awaits us beyond the horizon.
+          <!--Background image of Home-->
+          <img id="background-imagekr" src="media/images/HW-kharak.jpg" alt="homeworld-kharak-planet">
+
+          <div class="overlay__text-container">
+            <div class="overlay__text">
+              <p id="typewriter-text"></p>           
+              <!--Audio for intro-->
+              <audio id="story-audio" preload="auto">
+                <source src="media/audio/HW-Rachel-OPI.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+          </div>
+        </div>
+        
+        <!--Store and Description of Homeworld-->
+        <div id="home__trailer" class="container__hmcontent">
+          <div class="cont__trailer">
+              <h2>Homeworld: Desserts of Kharak</h2>
+              <p><Strong>Released:</Strong> January 20, 2016</p>
+              <p><Strong>Collaborator:</Strong> Gearbox Entertainment</p>
+              <p>
+                A ground-based RTS prequel to the classic Homeworld games. 
+                Assemble your fleet and lead them to victory on the shifting 
+                sands of Kharak in this compelling strategy game.
               </p>
-              <button id="start-btn">Start Story</button>
-              <audio id="story-audio" src="media/audio/story.mp3"></audio>
+          
+            <!--Store buttons-->
+            <div class="store__btn">
+              <a href="https://store.steampowered.com/app/281610/Homeworld_Deserts_of_Kharak/" target="_blank" rel="noopener noreferrer">Steam</a>
+              <a href="https://store.epicgames.com/en-US/p/homeworld-deserts-of-kharak" target="_blank" rel="noopener noreferrer">Epic Games</a>
+            </div>
+          
+            <div class="media__section">
+              <!-- Video -->
+              <div class="video__column">
+                <iframe src="https://www.youtube.com/embed/n1yrFE9FfrA?controls=1&rel=0" allowfullscreen></iframe>
+              </div>
+            
+              <!-- Gallery -->
+              <div class="screenshot__column">
+                <div class="trailer__gallery">
+                  <img id="mainImage" src="https://blackbirdinteractive.com/wp-content/uploads/2024/08/Homeworld-Deserts-of-Kharak-Screenshot-1.jpg" alt="Gallery Image" />
+                  <div class="gallery__pagid">
+                    <span class="trail__dot active" onclick="showImage(0)"></span>
+                    <span class="trail__dot" onclick="showImage(1)"></span>
+                    <span class="trail__dot" onclick="showImage(2)"></span>
+                    <span class="trail__dot" onclick="showImage(3)"></span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
     </main>
+    <footer>
+      <div class="footer__content">
+        <div class="footer__box footer__logo">
+          <img src="media/images/HWDK-Title.png" alt="homeworld-dessert-kharak-title"/>
+          <p>
+            Homeworld: Deserts of Kharak - The first ground-based chapter of
+            the Homeworld saga, where strategy meets survival in the unforgiving desert
+          </p>
+        </div>
+
+        <div class="footer__box footer__socials">
+          <h3>Socials</h3>
+          <ul>
+            <li class="dropdown">
+              <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.linkedin.com/company/gearbox-entertainment/" target="_blank">Gearbox Entertainment</a></li>
+                <li><a href="https://www.linkedin.com/company/blackbird-interactive-inc/?originalSubdomain=ca" target="_blank">Blackbird Interactive</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://www.youtube.com/@gearboxofficial" target="_blank">Gearbox Official</a></li>
+                <li><a href="https://www.youtube.com/@BBIgames" target="_blank">Blackbird Interactive</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+              <ul class="dropdown-menu">
+                <li><a href="https://x.com/gearboxofficial" target="_blank">Gearbox Official</a></li>
+                <li><a href="https://x.com/bbigames" target="_blank">Blackbird Interactive</a></li>
+                <li><a href="https://x.com/HomeworldGame" target="_blank">Homeworld</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__box footer__contact">
+          <h3>Get in Touch</h3>
+          <form action="#" method="post" class="footer__form">
+            <label for="email" class="visually-hidden">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required/>
+            <button type="submit">Subscribe</button>
+          </form>
+          <h3>About</h3>
+          <p>
+            <a href="https://www.homeworlduniverse.com/category/games-related-news/homeworld-deserts-of-kharak/" target="_blank">
+              <i class="fas fa-newspaper"></i> News
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__company">
+          <div class="company">
+            <img src="https://www.gearboxsoftware.com/wp-content/uploads/2025/01/gbx_ent_60_w.png">
+            <img src="https://blackbirdinteractive.com/wp-content/uploads/2024/06/Main-Page-Logo-V3.png">
+          </div>
+        </div>
+        <p>&copy; 2025 Homeworld: Deserts of Kharak Fan Website. All rights reserved.</p>
+      </div>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
