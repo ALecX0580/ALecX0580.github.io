@@ -1,5 +1,5 @@
 // Opening Homepage
-const container = document.getElementById('background-imagekr');
+const container = document.getElementById('Home_Intro');
 const audio = document.getElementById('story-audio');
 const textEl = document.getElementById('typewriter-text');
 
@@ -18,14 +18,14 @@ const lines = [
 
 // Per-line custom delays
 const delays = [
-    4500, // 1st Line
-    1000, // 2nd Line 
-    2500, // 3rd Line etc..
-    2000, 
-    1000, 
-    1000, 
-    1000, 
-    1500
+  4500, // 1st Line
+  1000, // 2nd Line 
+  2500, // 3rd Line etc..
+  2000, 
+  1000, 
+  1000, 
+  1000, 
+  1500
 ];
 
 // Prevents when typing has started
@@ -77,7 +77,7 @@ container.addEventListener('mouseleave', () => {
   clearTyping();            // stop typing and clear the text
 });
 
-// == Pagnation Dots == Trailler Gallery
+// === Pagnation Dots === Trailler Gallery
 // For Gallery
 const images = [
   "https://blackbirdinteractive.com/wp-content/uploads/2024/08/Homeworld-Deserts-of-Kharak-Screenshot-1.jpg",

@@ -21,7 +21,7 @@
             <!--Logo image -->
             <img src="media/images/HomeowlrdLogo.png" class="head__logo">
 
-            <!--Title and Homepage-->
+            <!--Title & Homepage-->
             <a href="index.html" class="home__btn">
               <div class="navbar__title">
                 <span class="main__title">Homeworld</span>
@@ -29,32 +29,20 @@
               </div>
             </a>
 
-            <!--Story and Character Dropdown-->
+            <!--Story & Character Dropdown-->
             <div class="head__dropdown">
               <a href="pages/story-and-character/story-character.html" class="drop__btn">Story and Characters
                 <i class="fa fa-caret-down"></i>
               </a>
               <div class="dropdown__content">
-                <a href="#">Story Summary</a>
-                <a href="#">Main Character</a>
-                <a href="#">Supporting Character</a>
+                <a href="pages/story-and-character/story-character.html#StorySummary">Story Summary</a>
+                <a href="pages/story-and-character/story-character.html#MainCharacter">Main Character</a>
               </div>
             </div>
 
-            <!--Plot and Mission Links-->
-            <a href="pages/plot/plot.html" class="navbar__link">Plot</a>
+            <!--Gameplay & Mission Links-->
+            <a href="pages/gameplay/gameplay.html" class="navbar__link">Gameplay</a>
             <a href="pages/mission/mission.html" class="navbar__link">Mission</a>
-
-            <!--Faction Dropdown-->
-            <div class="head__dropdown">
-              <a href="pages/faction/faction.html" class="drop__btn">Faction
-                <i class="fa fa-caret-down"></i>
-              </a>
-              <div class="dropdown__content">
-                <a href="#">Coalition</a>
-                <a href="#">Gaalsien</a>
-              </div>
-            </div>
 
             <!--Units Dropdown-->
             <div class="head__dropdown">
@@ -70,66 +58,71 @@
                 <a href="#">Basic Vehicles</a>
               </div>
             </div>
+
+            <!--Development Links-->
+            <a href="pages/development/development.html" class="navbar__link">Development</a>
         </nav>
     </header>
   
     <!--Main Content-->
-    <main>
-        <div class="container__hmcontent"> 
-          <!--Background image of Home-->
-          <img id="background-imagekr" src="media/images/HW-kharak.jpg" alt="homeworld-kharak-planet">
+    <div class="main__wrapper">
+      <main>
+          <div id="Home_Intro" class="container__hmcontent"> 
+            <!--Background image of Home-->
+            <img id="background-imagekr" src="media/images/HW-kharak.jpg" alt="homeworld-kharak-planet">
 
-          <div class="overlay__text-container">
-            <div class="overlay__text">
-              <p id="typewriter-text"></p>           
-              <!--Audio for intro-->
-              <audio id="story-audio" preload="auto">
-                <source src="media/audio/HW-Rachel-OPI.mp3" type="audio/mpeg">
-              </audio>
+            <div class="overlay__text-container">
+              <div class="overlay__text">
+                <p id="typewriter-text"></p>           
+                <!--Audio for intro-->
+                <audio id="story-audio" preload="auto">
+                  <source src="media/audio/HW-Rachel-OPI.mp3" type="audio/mpeg">
+                </audio>
+              </div>
             </div>
           </div>
-        </div>
-        
-        <!--Store and Description of Homeworld-->
-        <div id="home__trailer" class="container__hmcontent">
-          <div class="cont__trailer">
-              <h2>Homeworld: Desserts of Kharak</h2>
-              <p><Strong>Released:</Strong> January 20, 2016</p>
-              <p><Strong>Collaborator:</Strong> Gearbox Entertainment</p>
-              <p>
-                A ground-based RTS prequel to the classic Homeworld games. 
-                Assemble your fleet and lead them to victory on the shifting 
-                sands of Kharak in this compelling strategy game.
-              </p>
-          
-            <!--Store buttons-->
-            <div class="store__btn">
-              <a href="https://store.steampowered.com/app/281610/Homeworld_Deserts_of_Kharak/" target="_blank" rel="noopener noreferrer">Steam</a>
-              <a href="https://store.epicgames.com/en-US/p/homeworld-deserts-of-kharak" target="_blank" rel="noopener noreferrer">Epic Games</a>
-            </div>
-          
-            <div class="media__section">
-              <!-- Video -->
-              <div class="video__column">
-                <iframe src="https://www.youtube.com/embed/n1yrFE9FfrA?controls=1&rel=0" allowfullscreen></iframe>
+
+          <!--Store and Description of Homeworld-->
+          <div id="home__trailer" class="container__hmcontent">
+            <div class="cont__trailer">
+                <h2>Homeworld: Desserts of Kharak</h2>
+                <p><b>Released:</b> January 20, 2016</p>
+                <p><b>Collaborator:</b> Gearbox Entertainment</p>
+                <p>
+                  A ground-based RTS prequel to the classic Homeworld games. 
+                  Assemble your fleet and lead them to victory on the shifting 
+                  sands of Kharak in this compelling strategy game.
+                </p>
+              
+              <!--Store buttons-->
+              <div class="store__btn">
+                <a href="https://store.steampowered.com/app/281610/Homeworld_Deserts_of_Kharak/" target="_blank" rel="noopener noreferrer">Steam</a>
+                <a href="https://store.epicgames.com/en-US/p/homeworld-deserts-of-kharak" target="_blank" rel="noopener noreferrer">Epic Games</a>
               </div>
             
-              <!-- Gallery -->
-              <div class="screenshot__column">
-                <div class="trailer__gallery">
-                  <img id="mainImage" src="https://blackbirdinteractive.com/wp-content/uploads/2024/08/Homeworld-Deserts-of-Kharak-Screenshot-1.jpg" alt="Gallery Image" />
-                  <div class="gallery__pagid">
-                    <span class="trail__dot active" onclick="showImage(0)"></span>
-                    <span class="trail__dot" onclick="showImage(1)"></span>
-                    <span class="trail__dot" onclick="showImage(2)"></span>
-                    <span class="trail__dot" onclick="showImage(3)"></span>
+              <div class="media__section">
+                <!-- Video -->
+                <div class="video__column">
+                  <iframe src="https://www.youtube.com/embed/n1yrFE9FfrA?controls=1&rel=0" allowfullscreen></iframe>
+                </div>
+              
+                <!-- Gallery -->
+                <div class="screenshot__column">
+                  <div class="trailer__gallery">
+                    <img id="mainImage" src="https://blackbirdinteractive.com/wp-content/uploads/2024/08/Homeworld-Deserts-of-Kharak-Screenshot-1.jpg" alt="Gallery Image" />
+                    <div class="gallery__pagid">
+                      <span class="trail__dot active" onclick="showImage(0)"></span>
+                      <span class="trail__dot" onclick="showImage(1)"></span>
+                      <span class="trail__dot" onclick="showImage(2)"></span>
+                      <span class="trail__dot" onclick="showImage(3)"></span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-    </main>
+      </main>
+    </div>
     <footer>
       <div class="footer__content">
         <div class="footer__box footer__logo">

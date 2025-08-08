@@ -16,7 +16,8 @@ html, body {
 body {
   margin: 0;
   background: radial-gradient(ellipse at center, #113557 0%, #000 100%);
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
 /*=====Font Import=====*/
@@ -25,7 +26,7 @@ body {
   src: url("fonts/microgrammanormal.ttf") format("truetype");
 }
 
-/* ===== Custom Scrollbar ===== */
+/*===== Custom Scrollbar =====*/
 /*Chrome and Edge*/
 ::-webkit-scrollbar {
   width: 12px;
@@ -64,7 +65,7 @@ header {
   font: 28px "microgamma", sans-serif;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
 }
 
 .hnavbar {
@@ -171,9 +172,11 @@ nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
 /*=====Main Content Styling=====*/
 .container__hmcontent {
   position: relative;
-  width: 1980px;
-  height: 1080px;
+  width: 100%;
+  height: calc(100vh - 80px); /*Full viewport height minus header*/
   overflow: hidden;
+  margin: 0 auto;
+  background: none;
 }
 
 /*Chatlog Box*/
@@ -212,7 +215,7 @@ nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1980px;
+  width: 1920px;
   height: 1080px;
   background: url('https://i0.wp.com/www.fistsofheaven.com/wp-content/uploads/2016/07/Homeworld-Deserts-of-Kharak-Collectors-Edition-Concept-Art-Baserunner-Cockpit-View.jpg?w=2190') no-repeat center center fixed;
   background-size: cover;
@@ -223,7 +226,7 @@ nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
   }
 
 .cont__trailer {
-  background-color: #000000a9;
+  background-color: #000000cb;
   margin: 32px;
   padding: 32px;
   width: 100%;
@@ -325,6 +328,8 @@ nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
 
 /*=====Footer Styling=====*/
 footer {
+  position: absolute;
+  width: 100%;
   background: #182e56;
   color: #F7FCFE;
   padding: 10px 5px;
@@ -394,7 +399,7 @@ footer {
   line-height: 2em;
 }
 
-/* Footer bottom for companies & copyright */
+/*Footer bottom for companies & copyright*/
 .footer__bottom {
   display: flex;
   flex-direction: column;
@@ -423,7 +428,7 @@ footer {
   display: block;
 }
 
-/* =====Dropdowns for footer socials===== */
+/* =====Dropdowns for footer socials=====*/
 .footer__socials ul li.dropdown {
   position: relative;
 }
@@ -433,6 +438,7 @@ footer {
   position: absolute;
   left: 0;
   top: 100%;
+  margin-top: 0;
   background: #28589F;
   border-radius: 4px;
   min-width: 200px;
@@ -456,7 +462,8 @@ footer {
   background-color: #2858e6;
 }
 
-.footer__socials ul li.dropdown:hover .dropdown-menu {
+.footer__socials ul li.dropdown:hover .dropdown-menu,
+.footer__socials ul li.dropdown .dropdown-menu:hover {
   display: block;
 }
 

@@ -1,0 +1,291 @@
+/*=====Story faction Stylesheet=====*/
+/*Story Block*/
+.heading__story {
+    font: 24px "microgamma", sans-serif;
+    color: #F1F1F1;
+    padding: 16px 24px;
+    text-align: center;
+    border: 2px solid #28589F;
+    border-radius: 12px;
+    background: #182e56;
+    box-shadow: 0 4px 12px #00000041;
+}
+
+.cont__story {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 2rem;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #00000041;
+    border-radius: 12px;
+}
+
+.story__block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.cont__storyimg {
+    flex: 0 0 auto;
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px #00000041;
+}
+
+.cont__storyimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Animation Class*/
+.text-focus-in {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    margin: 0;
+    padding: 0;
+    color: #F7FCFE;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: justify ;
+    width: 100%;
+    line-height: 1.2;
+}
+
+/*Animation Keyframes*/
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+
+/*Faction*/
+#MainCharacter {
+    position: relative;
+}
+
+.faction__image {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transform: none;
+}
+
+/*Image inside each faction block*/
+.faction__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Slide-in from left (S'jet)*/
+.faction__image.left {
+    left: -960px;
+    animation: slide-left-in 0.5s ease-out forwards;
+}
+
+/*Slide-in from right (Gaalsien)*/
+.faction__image.right {
+    right: -960px;
+    left: auto;
+    animation: slide-right-in 0.5s ease-out forwards;
+}
+
+/*Emblem overlay styles*/
+.overlay__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: background-image 0.5s ease-in-out;
+    z-index: 3;
+}
+
+/*Emblem background switching*/
+.sjet-logo {
+    background-image: url('../../media/images/Def-Kiith_Sjet.png');
+}
+.faction__image.left:hover .sjet-logo {
+    background-image: url('../../media/images/Kiith_Sjet.png');
+}
+
+.gaalsien-logo {
+    background-image: url('../../media/images/Def-Kiith_Gaalsien.png');
+}
+.faction__image.right:hover .gaalsien-logo {
+    background-image: url('../../media/images/Kiith_Gaalsien.png');
+}
+
+/*When expanded, start off-screen fully and slide in*/
+.faction__image.fullscreen-left {
+    left: -1920px;
+    right: auto;
+    width: 1920px;
+    z-index: 5;
+}
+
+/*Trigger slide to center by changing left to 0*/
+.faction__image.fullscreen-left.slide-in {
+    left: 0;
+}
+
+/*Similarly for right*/
+.faction__image.fullscreen-right {
+    right: -1920px;
+    left: auto;
+    width: 1920px;
+    z-index: 5;
+}
+
+.faction__image.fullscreen-right.slide-in {
+    right: 0;
+}
+
+/*Added transition for smooth sliding*/
+.faction__image {
+    transition: left 1s ease, right 1s ease, width 1s ease;
+}
+
+/*Hide element*/
+.hidden {
+    display: none !important;
+}
+
+/*Animations*/
+@keyframes slide-left-in {
+    to {
+      left: 0;
+    }
+}
+
+@keyframes slide-right-in {
+    to {
+      right: 0;
+    }
+}
+
+.close__btn {
+    position: absolute;
+    top: 20px;
+    font-size: 2.5rem;
+    background: #00000083;
+    color: white;
+    border: none;
+    padding: 0 12px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+    user-select: none;
+}
+
+.close__btn:hover {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/*Position on right for S'jet (left image)*/
+.close-left {
+    right: 20px;
+}
+
+/*Position on left for Gaalsien (right image)*/
+.close-right {
+    left: 20px;
+}
+
+/*Popup styles*/
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1080px;
+    height: 680px;
+    background: #000000cb;
+    display: flex;
+    gap: 15px;
+    padding: 40px 25px;
+    z-index: 5;
+    border-radius: 12px;
+}
+
+.popup__character-image {
+    transition: opacity 1s ease;
+    opacity: 1;
+    width: 420px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.popup__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.popup__name {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px 24px;
+    text-align: left;
+    border: 2px solid #28589F;
+    border-radius: 8px;
+    background: #3a7bff;
+    color: #F7FCFE;
+    flex: 0 0 auto; 
+}
+
+.popup__description {
+    font-size: 1.2rem;
+    color: #F7FCFE;
+    padding: 4px 12px;
+    border: 2px solid #28589F;
+    border-radius: 8px;
+    flex: 1 1 auto; 
+}
+
+.popup__description p {
+    margin-bottom: 16px;
+    line-height: 24px;
+    text-align: justify;
+    font-family: Arial, sans-serif;;
+}
