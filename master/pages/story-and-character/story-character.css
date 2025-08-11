@@ -1,5 +1,4 @@
-/*=====Story faction Stylesheet=====*/
-/*Story Block*/
+/*=====Story Block=====*/
 .heading__story {
     font: 24px "microgamma", sans-serif;
     color: #F1F1F1;
@@ -14,7 +13,7 @@
 .cont__story {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     max-width: 1000px;
     margin: 30px auto;
     padding: 2rem;

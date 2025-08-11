@@ -1,0 +1,86 @@
+/*=====Container for video and text======*/
+.banner__gameplay {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    font-family: "microgamma", sans-serif;
+}
+
+/*Video element styling*/
+.banner__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%); /*darken the video*/
+    z-index: 0;
+}
+
+/*Overlay text container*/
+.banner__content {
+    position: relative;
+    z-index: 1;
+    color: #F7FCFE; /*light color for contrast*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/*page title styling*/
+.page__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/*page description styling*/
+.page__description {
+    font-size: 1.5rem; 
+    max-width: 600px;
+    line-height: 1.4;
+}
+
+/*==Gameplay mechanics container */
+.cont__mechanics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+/* Individual mechanic blocks */
+.mechanic__block {
+    background-color: #182e56;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    flex: 1 1 400px;
+    color: #F7FCFE;
+}
+
+/* Block headings */
+.mechanic__block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #28589F;
+    padding-bottom: 0.5rem;
+}
+
+/* List styling */
+.mechanic__block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mechanic__block li {
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}

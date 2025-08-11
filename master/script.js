@@ -1,5 +1,5 @@
 // Opening Homepage
-const container = document.getElementById('Home_Intro');
+const container = document.getElementById('home-intro');
 const audio = document.getElementById('story-audio');
 const textEl = document.getElementById('typewriter-text');
 

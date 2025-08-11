@@ -176,7 +176,10 @@ nav a:not(.home__btn):hover, .head__dropdown:hover .drop__btn {
   height: calc(100vh - 80px); /*Full viewport height minus header*/
   overflow: hidden;
   margin: 0 auto;
-  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
 }
 
 /*Chatlog Box*/
@@ -419,6 +422,7 @@ footer {
   display: flex;
   gap: 24px;
   align-items: center;
+  cursor: pointer;
 }
 
 .company img {
