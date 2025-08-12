@@ -6,6 +6,7 @@
     <title>Homeworld: Units</title>
     <link rel="shortcut icon" href="../../media/images/HomeowlrdLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="units.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -57,7 +58,66 @@
     </header>
 
     <main>
-
+      <!--Title and Description of Page-->
+      <div class="container__hmcontent">
+        <section class="banner__unit">
+          <div class="banner__dim"></div>
+          <div class="banner__content">
+            <h2 class="page__title">Units</h2>
+            <p class="page__description">
+              Explore the units available on the battlefield, each with unique abilities and roles to determine each the fight.
+            </p>
+          </div>
+        </section>
+      </div>
+      
+      <div class="units-container">
+        <nav class="units-sidebar">
+          <!-- Coalition -->
+          <div class="units-category">
+            <div class="units-category-header">
+              Coalition
+              <span class="units-arrow">&#9654;</span>
+            </div>
+            <div class="units-subcategory">
+              <div class="units-subcategory-header">
+                Basic Vehicles
+                <span class="units-arrow">&#9654;</span>
+              </div>
+              <ul class="units-list">
+                <li class="units-item" data-unit="salvager">
+                  <img src="../../media/images/units/c-bvr-salvager.jpg" alt="Salvager">
+                  <p>Salvager</p>
+                </li>
+                <li class="units-item" data-unit="lav">
+                  <img src="../../media/images/units/c-bv-lav.jpg" alt="Light Assault Vehicle">
+                  <p>Light Assault Vehicle (LAV)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        
+          <!-- Gaalsien -->
+          <div class="units-category">
+            <div class="units-category-header">
+              Gaalsien
+              <span class="units-arrow">&#9654;</span>
+            </div>
+            <div class="units-subcategory">
+              <div class="units-subcategory-header">
+                Basic Vehicles
+                <span class="units-arrow">&#9654;</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      
+        <section class="units-main" id="units-main">
+          <!-- Unit details shown here -->
+          <h2 class="units-details__title">Select a unit</h2>
+          <p class="units-details__description">Click a unit on the left to see details.</p>
+        </section>
+      </div>
     </main>
 
     <footer>
@@ -122,5 +182,6 @@
         <p>&copy; 2025 Homeworld: Deserts of Kharak Fan Website. All rights reserved.</p>
       </div>
     </footer>
+    <script src="units.js"></script>
 </body>
 </html>

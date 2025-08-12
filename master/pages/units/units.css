@@ -1,1 +1,148 @@
-a
+/*=====Unit banner container=====*/
+.banner__unit {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: "microgamma", sans-serif;
+}
+
+/*Dim overlay with background image*/
+.banner__dim {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("../../media/images/units/g-c-SupperCarrier-Khad-Sajuuk.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    z-index: 0;
+}
+
+/*Text content on top of banner*/
+.banner__content {
+    position: relative;
+    z-index: 1;
+    color: #F7FCFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/*Page title styling*/
+.page__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: "microgamma", sans-serif;
+}
+
+/*Page description styling*/
+.page__description {
+    font-size: 1.5rem;
+    max-width: 600px;
+    line-height: 1.4;
+    font-family: "microgamma", sans-serif;
+}
+
+/*=====Container Layout=====*/
+.units-container {
+    display: flex;
+    height: calc(100vh - 200px);
+}
+
+/*Sidebar*/
+.units-sidebar {
+    width: 20%;
+    background: #182e56;
+    overflow-y: auto;
+    padding: 10px;
+    border-right: 2px solid #333;
+}
+
+/*Category Header*/
+.units-category-header,
+.units-subcategory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: #28589F;
+    cursor: pointer;
+    user-select: none;
+    color: #F7FCFE;
+}
+
+/*Arrow icon transition*/
+.units-arrow {
+    transition: transform 0.3s ease;
+}
+
+/*Rotate arrow when category/sub is active*/
+.units-category-header.active .units-arrow,
+.units-subcategory-header.active .units-arrow {
+    transform: rotate(90deg);
+}
+
+/*Subcategories & Units hide*/
+.units-subcategory,
+.units-list {
+    display: none;
+    padding-left: 10px;
+}
+
+/*Removes deafault list style for unit list*/
+.units-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.units-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    color: #F7FCFE;
+}
+
+.units-item:hover,
+.units-item.active {
+    background: #2858e6;
+}
+
+.units-item img {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 4px;
+}
+
+.units-item p {
+    font-family: 'Microgamma', sans-serif;
+    margin: 5px;
+    text-align: center;
+}
+
+/*Main Content*/
+.units-main {
+    width: 80%;
+    padding: 20px;
+    overflow-y: auto;
+    color: #F7FCFE;
+    font-family: 'Microgamma', sans-serif;
+}
+
+.units-details__title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.units-details__description {
+    font-size: 1.2rem;
+}
