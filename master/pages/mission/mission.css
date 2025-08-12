@@ -1,130 +1,130 @@
 /*=====Mission banner container=====*/
 .banner__mission {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  font-family: "microgamma", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: "microgamma", sans-serif;
 }
 
 /*Dim overlay with background image*/
 .banner__dim {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: url('../../media/images/mission-kharak-map.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.5); 
-  background-blend-mode: darken;
-  z-index: 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('../../media/images/mission-kharak-map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: darken;
+    z-index: 0;
 }
 
 /*Text content on top of banner*/
 .banner__content {
-  position: relative;
-  z-index: 1;
-  color: #F7FCFE;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: center;
-  padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    color: #F7FCFE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 20px;
 }
 
 /*Page title styling*/
 .page__title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-family: "microgamma", sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: "microgamma", sans-serif;
 }
 
 /*Page description styling*/
 .page__description {
-  font-size: 1.5rem;
-  max-width: 600px;
-  line-height: 1.4;
-  font-family: "microgamma", sans-serif;
+    font-size: 1.5rem;
+    max-width: 600px;
+    line-height: 1.4;
+    font-family: "microgamma", sans-serif;
 }
 
 /*=====Carousel Container=====*/
 .mission-carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Slides Wrapper*/
 .mission-slides {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.5s ease;
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
 }
 
 /*Individual Slide*/
 .mission-slide {
-  background: #000000;
-  color: #F7FCFE;
-  overflow: hidden;
-  min-width: 60%;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    background: #000000;
+    color: #F7FCFE;
+    overflow: hidden;
+    min-width: 60%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .mission-slide.active {
-  transform: scale(1.05); /*for active slide, zoom in*/
+    transform: scale(1.05); /*for active slide, zoom in*/
 }
 
 .mission-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .mission-slide h3 {
-  margin: 5px 0 5px;
+    margin: 5px 0 5px;
 }
 
 .mission-slide p {
-  max-width: 600px;      
-  margin: 0 auto;
-  padding: 0 20px;
-  line-height: 1.5;
-  color: #F7FCFE;
-  font-family: Arial, sans-serif;
+    max-width: 600px;            
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1.5;
+    color: #F7FCFE;
+    font-family: Arial, sans-serif;
 }
 
 /*=====Navigation Arrows=====*/
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
-  z-index: 5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 5;
 }
 
 .left-arrow {
-  left: 10px;
+    left: 10px;
 }
 
 .right-arrow {
-  right: 10px;
+    right: 10px;
 }
 
 .arrow:hover {
-  background: rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
 }
