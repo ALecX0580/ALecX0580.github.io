@@ -1,4 +1,4 @@
-<!-- Make this about the history of the game coming from homeworld 1 & 2 till now which is DOK-->
+<!--Make this about the history of the game coming from homeworld 1 & 2 till now which is DOK-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@
     <header>
         <!--Navigation Bar-->
         <nav class="hnavbar">
-            <!--Logo image -->
+            <!--Logo image-->
             <img src="../../media/images/HomeowlrdLogo.png" class="head__logo">
 
             <!--Title and Homepage-->
@@ -55,9 +55,6 @@
                 <a href="#">Basic Vehicles</a>
               </div>
             </div>
-
-            <!--Development Links-->
-            <a href="../development/development.html" class="navbar__link">Development</a>
         </nav>
     </header>
     
@@ -69,9 +66,10 @@
               <p class="page__description">Explore core mechanics of Deserts of Kharak, and its unique features inspired by previous titles of the franchise</p>
           </div>
       </div>
-    
+
+      <!--Gameplay Mechanics Container-->
       <div id="mechanics" class="cont__mechanics">
-          <!-- Core Gameplay Mechanics -->
+          <!--Core Gameplay Mechanics-->
           <section class="mechanic__block">
               <h3>Core Mechanics</h3>
               <ul>
@@ -83,7 +81,7 @@
               </ul>
           </section>
         
-          <!-- Unique Features -->
+          <!--Unique Features-->
           <section class="mechanic__block">
               <h3>Unique to Deserts of Kharak</h3>
               <ul>
@@ -95,10 +93,50 @@
               </ul>
           </section>
       </div>
+
+      <!--Mechanics Description Container-->
+      <div class="gameplay__extra-container">
+        <!--Resource Gathering-->
+        <div class="gameplay__extra">
+          <h3>Resource Gathering</h3>
+          <div class="gameplay__extra-content">
+            <img src="../../media/images/g-resources.jpg" alt="Resources Overview">
+            <p>The right indicator represents CUs(Construction Units), and the left indicator shows RUs(Resource Units).</p>
+            <p>These are used to do certain stuff, like for Construction Units, You can make use of this to make units, and for Ressource Units, this is used for research.</p>
+          </div>
+        </div>
+      
+        <!--Power Management-->
+        <div class="gameplay__extra">
+          <h3>Power Management</h3>
+          <div class="gameplay__extra-content">
+            <video src="../../media/video/g-pm.mp4" autoplay muted loop playsinline></video>
+            <p>Power Management allows you to redistribute the carrier’s available power between systems such as weapons, shields, and engines for tactical advantage.</p>
+            <p>Choosing which to distribute the power to, will depend on the situation. Effective power allocation will help last longer against your opponents</p>
+          </div>
+        </div>
+      
+        <!--Line of Sight-->
+        <div class="gameplay__extra">
+          <h3>Terrain Line of Sight</h3>
+          <div class="gameplay__extra-content">
+            <video src="../../media/video/g-los.mp4" autoplay muted loop playsinline></video>
+            <p>Line of Sight determines unit visibility on the battlefield. Units cannot detect enemies hidden behind terrain or outside their sensor range.</p>
+          </div>
+        </div>
+      
+        <!--Terrain Elevation-->
+        <div class="gameplay__extra">
+          <h3>Terrain Elevation</h3>
+          <div class="gameplay__extra-content">
+            <video src="../../media/video/g-te.mp4" autoplay muted loop playsinline></video>
+            <p>Terrain Elevation affects weapon range, accuracy, and visibility. Higher ground offers tactical advantages over lower positions.</p>
+            <p>Units positioned on elevated terrain can shoot farther and deal increase damage improve line of sight, making control of high ground a tactical objective</p>
+          </div>
+        </div>
+      </div>
     </main>
 
-
-    
     <footer>
       <div class="footer__content">
         <div class="footer__box footer__logo">
@@ -165,5 +203,6 @@
         <p>&copy; 2025 Homeworld: Deserts of Kharak Fan Website. All rights reserved.</p>
       </div>
     </footer>
+    <script src="gameplay.js"></script>
 </body>
 </html>

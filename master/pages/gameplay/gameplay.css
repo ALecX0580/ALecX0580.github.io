@@ -38,6 +38,7 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    font-family: "microgamma", sans-serif;
 }
 
 /*page description styling*/
@@ -45,9 +46,19 @@
     font-size: 1.5rem; 
     max-width: 600px;
     line-height: 1.4;
+    font-family: "microgamma", sans-serif;
 }
 
-/*==Gameplay mechanics container */
+body, 
+.cont__mechanics,
+.mechanic__block,
+.gameplay__extra,
+.gameplay__extra-content p,
+.gameplay__extra p {
+    font-family: Arial, sans-serif;
+}
+
+/*==Gameplay mechanics container*/
 .cont__mechanics {
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +67,7 @@
     padding: 4rem 2rem;
 }
 
-/* Individual mechanic blocks */
+/*Individual mechanic blocks*/
 .mechanic__block {
     background-color: #182e56;
     border-radius: 12px;
@@ -64,17 +75,19 @@
     max-width: 500px;
     flex: 1 1 400px;
     color: #F7FCFE;
+    font-family: Arial, sans-serif;
 }
 
-/* Block headings */
+/*Block headings*/
 .mechanic__block h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #28589F;
     padding-bottom: 0.5rem;
+    font-family: "microgamma", sans-serif;
 }
 
-/* List styling */
+/*List styling*/
 .mechanic__block ul {
     list-style: none;
     padding: 0;
@@ -83,4 +96,77 @@
 .mechanic__block li {
     margin-bottom: 0.8rem;
     line-height: 1.4;
+}
+
+/*=====Container with side margins, 4 tiles per row=====*/
+.gameplay__extra-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    background-color: #00000041;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/*Default tile style: ~22% width*/
+.gameplay__extra {
+    flex: 1 1 22%;
+    background: #182e56;
+    border: 2px solid #28589F;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: flex 0.5s ease, box-shadow 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/*Expanded tile: full width with padding and shadow*/
+.gameplay__extra.selected {
+    flex: 1 1 100%;
+    padding: 20px;
+    box-shadow: 0 0 15px #28589F;
+    z-index: 2;
+    align-items: flex-start;
+}
+
+.gameplay__extra.shrunk {
+  flex: 1 1 10%;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+  transition: flex 0.5s ease, opacity 0.5s ease;
+}
+
+/*Tile heading*/
+.gameplay__extra h3 {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #F7FCFE;
+    font-family: "microgamma", sans-serif;
+}
+
+/*Media inside content wrapper*/
+.gameplay__extra-content video,
+.gameplay__extra-content img {
+    width: 70%;
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: none;
+}
+
+/*Paragraph in non-expanded tiles*/
+.gameplay__extra p {
+    margin-top: 15px;
+    color: #F7FCFE;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
 }
